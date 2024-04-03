@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Royryan Merc...",
+    "img": "../../public/stories_account-logo1.svg",
+    "active": "logo-stories-active",
+    "id": 0
+  },
+  {
+    "title": "Neil Gaiman",
+    "img": "../../public/stories_account-logo2.svg",
+    "active": "logo-stories-active",
+    "id": 1
+  },
+  {
+    "title": "Mark mcallister",
+    "img": "../../public/stories_account-logo3.svg",
+    "active": "logo-stories-active",
+    "id": 2
+  },
+  {
+    "title": "Michael Doug...",
+    "img": "../../public/stories_account-logo4.svg",
+    "active": "logo-stories",
+    "id": 3
+  }
+]
