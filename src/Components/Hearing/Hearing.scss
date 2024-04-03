@@ -1,0 +1,65 @@
+.hearing {
+    background-color: #1d201c;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    .hearing__leftitem {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      position: relative;
+      &::after {
+        left: 0;
+        top: -8px;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        border-top: 1px solid rgba(205, 231, 190, 1);
+      }
+  
+      img {
+        width: 38px;
+        height: 54px;
+      }
+      .hearing__leftitem-description {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        &-title {
+          font-family: Gotham;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: rgba(205, 231, 190, 1);
+        }
+        &-subtitle {
+          font-family: Gotham;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.4px;
+          color: rgba(234, 244, 244, 1);
+        }
+      }
+    }
+    .hearing__rightitem {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      .hearing__rightitem-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: rgba(205, 231, 190, 1);
+        border-radius: 50%;
+      }
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  
