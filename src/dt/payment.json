@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "cardNumber": 4332122343214321,
+    "Cardholder name": "Karala Us",
+    "CVV": 5613,
+    "img": "../../public/visa.svg",
+    "MMYY": 1722
+  },
+  {
+    "id": 2,
+    "cardNumber": 3461824396127831,
+    "Cardholder name": "Karala Us",
+    "CVV": 3642,
+    "MMYY": 1224,
+    "img": "../../public/mastercard.svg"
+  },
+  {
+    "id": 3,
+    "cardNumber": 6457312634978216,
+    "Cardholder name": "Karala Us",
+    "CVV": 8547,
+    "MMYY": 2428,
+    "img": "../../public/mastercard.svg"
+  },
+  {
+    "id": 4,
+    "cardNumber": 794213496581164,
+    "Cardholder name": "Karala Us",
+    "CVV": 9724,
+    "MMYY": 2525,
+    "img": "../../public/mastercard.svg"
+  }
+]
