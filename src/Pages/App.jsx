@@ -7,11 +7,15 @@ import Prime from "../Components/Prime/Prime";
 import Hearing from "../Components/Hearing/Hearing";
 import Catalog from "../Components/Catalog/Catalog";
 
+
 import LogIn from "./LogIn/LogIn";
 import SignUp from "./SignUp/SignUp";
 
 import { useState, useCallback, useEffect } from 'react';
 import { getAuth } from 'firebase/auth';
+
+
+import Payment from "../Components/Payment/Payment";
 
 function App() {
 
@@ -35,17 +39,22 @@ function App() {
 
   return (
     <>
-      <Account />
-      <div className="container">
+      {/* <Account /> */}
+      {/* <div className="container">
         <HomeScreen />
         <Genres />
         <Prime />
         <Catalog />
         <Hearing />
         <NavPanel />
+
       </div>
       {showLogIn && <LogIn hideLogIn={handleHideLogIn} showSignUp={handleShowSingUp}/>}
       {showSignUp && <SignUp hideSignUp={handleHideSingUp} showLogIn={handleShowLogIn}/>}
+
+      </div> */}
+      <Payment/>
+
     </>
   );
 }

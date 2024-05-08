@@ -5,6 +5,7 @@ import "./Genres.scss";
 export default function Genres() {
   const [genres, setGenres] = useState([]);
   const [showAll, setShowAll] = useState("genres");
+  
   useEffect(() => {
     const fetchBooks = async () => {
       const res = await axios.get(
