@@ -4,7 +4,7 @@ export default function Hearing() {
   return (
     <div className="hearing">
       <div className="hearing__leftitem">
-        <img src="../../../public/hearing_img.png" alt="#" />
+        <img src="../../../hearing_img.png" alt="#" />
         <div className="hearing__leftitem-description">
           <span className="hearing__leftitem-description-title">
             Continue Listening
@@ -16,10 +16,10 @@ export default function Hearing() {
       </div>
       <div className="hearing__rightitem">
         <div className="hearing__rightitem-img">
-          <img src="../../../public/Hearing_play.svg" alt="#" />
+          <img src="../../../Hearing_play.svg" alt="#" />
         </div>
         <div className="hearing__rightitem-img">
-          <img src="../../../public/hearing_skip.svg" alt="#" />
+          <img src="../../../hearing_skip.svg" alt="#" />
         </div>
       </div>
     </div>

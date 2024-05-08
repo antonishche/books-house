@@ -48,7 +48,7 @@ export default function Genres() {
         onClick={() => setShowAll("genres-active")}
       >
         <span>Show all</span>
-        <img src="../../../public/arrow.svg" alt="#" />
+        <img src="../../../arrow.svg" alt="#" />
       </div>
     </div>
   );

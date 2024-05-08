@@ -25,7 +25,7 @@ export default function Catalog() {
           onClick={() => setShowAll("catalog-active")}
         >
           <span>Show all</span>
-          <img src="../../../public/arrow.svg" alt="#" />
+          <img src="../../../arrow.svg" alt="#" />
         </div>
       </div>
       <div className="catalog-body">
