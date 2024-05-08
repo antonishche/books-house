@@ -1,0 +1,272 @@
+.modal {
+  background-color: #181919;
+  height: 100%;
+  max-width: 390px;
+
+  width: 100%;
+  .navigation {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navigation__leftitem {
+      .navigation-time {
+        color: rgba(255, 255, 255, 1);
+        font-family: SF Pro Display;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.71px;
+      }
+    }
+    .navigation__rightitem {
+      display: flex;
+      align-items: center;
+      column-gap: 8.5px;
+    }
+  }
+  .payment-account {
+    padding: 19px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    h2 {
+      color: rgba(234, 244, 244, 1);
+      font-family: Gotham;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+      text-decoration: none;
+    }
+  }
+  .payment {
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    .payment-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .payment-title {
+        span {
+          color: rgba(234, 244, 244, 1);
+          font-family: Gotham;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28.8px;
+          text-align: left;
+        }
+      }
+      .payment-btn {
+        border: 1px solid rgba(49, 51, 51, 1);
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 4px;
+        border-radius: 20px;
+        cursor: pointer;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          color: rgba(196, 204, 204, 1);
+          font-family: Gotham;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.8px;
+          text-align: left;
+        }
+      }
+    }
+    .payment-body {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      .card__item {
+        width: 100%;
+        padding: 12px;
+        background: rgba(39, 40, 40, 1);
+        border-radius: 8px;
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+      }
+    }
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      margin-top: 32px;
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(39, 40, 40, 1);
+        padding: 12px;
+        width: 100%;
+        border-radius: 8px;
+        .name,
+        .cvv {
+          display: none;
+        }
+        .cardNumber {
+          color: white;
+          font-family: Gotham;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 19.2px;
+        }
+        .data {
+          font-family: Gotham;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.4px;
+          color: rgba(255, 255, 255, 1);
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .payment-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 4px;
+      padding: 15px;
+      width: 100%;
+      background: rgba(205, 231, 190, 1);
+      border-radius: 8px;
+      margin-top: 200px;
+      border: none;
+      outline: none;
+      span {
+        font-family: Gotham;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.8px;
+        color: rgba(49, 51, 51, 1);
+      }
+    }
+  }
+}
+
+.modal-active-item {
+  background-color: #181919;
+  height: 100%;
+  max-width: 390px;
+  width: 100%;
+  padding-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .navigation {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navigation__leftitem {
+      .navigation-time {
+        color: rgba(255, 255, 255, 1);
+        font-family: SF Pro Display;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.71px;
+      }
+    }
+    .navigation__rightitem {
+      display: flex;
+      align-items: center;
+      column-gap: 8.5px;
+    }
+  }
+  .payment-account {
+    padding: 19px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    h2 {
+      color: rgba(234, 244, 244, 1);
+      font-family: Gotham;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+      text-decoration: none;
+    }
+  }
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+    .modal__content-title {
+      font-family: Gotham;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26.52px;
+      color: rgba(205, 231, 190, 1);
+      margin-bottom: 16px;
+    }
+    .modal__content-subtitle {
+      font-family: Gotham;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      color: rgba(234, 244, 244, 1);
+      margin-bottom: 32px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      width: 100%;
+      margin-bottom: 342px;
+      div {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        input {
+          width: 48%;
+        }
+      }
+      input {
+        background: rgba(39, 40, 40, 1);
+        border-radius: 8px;
+        padding: 16px;
+        font-family: Gotham;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: rgba(98, 102, 102, 1);
+        border: none;
+        outline: none;
+      }
+    }
+    .add-card-btn {
+      background-color: #73806c;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      span {
+        color: rgba(17, 34, 17, 1);
+      }
+    }
+  }
+}

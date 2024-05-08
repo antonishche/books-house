@@ -6,18 +6,20 @@ import NavPanel from "../Components/NavPanel/NavPanel";
 import Prime from "../Components/Prime/Prime";
 import Hearing from "../Components/Hearing/Hearing";
 import Catalog from "../Components/Catalog/Catalog";
+import Payment from "../Components/Payment/Payment";
 function App() {
   return (
     <>
-      <Account />
-      <div className="container">
+      {/* <Account /> */}
+      {/* <div className="container">
         <HomeScreen />
         <Genres />
         <Prime />
         <Catalog />
         <Hearing />
         <NavPanel />
-      </div>
+      </div> */}
+      <Payment/>
     </>
   );
 }
