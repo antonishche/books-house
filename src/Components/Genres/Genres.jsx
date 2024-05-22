@@ -24,16 +24,13 @@ export default function Genres() {
     localStorage.setItem("selectedGenres", JSON.stringify(selectedGenres));
   }, [selectedGenres]);
 
-  useEffect(() => {
+   useEffect(() => {
     const fetchGenres = async () => {
       const res = await axios.get(
         "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=m1gKqvE9El7QVotwOmRz1GiwFG1hEGFk"
       );
       setGenres(res.data.results.lists);
-
-      console.log(res.data.results.lists);
-    };    fetchBooks();
-
+    };
     fetchGenres();
   }, []);
 
