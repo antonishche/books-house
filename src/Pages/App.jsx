@@ -6,6 +6,7 @@ import NavPanel from "../Components/NavPanel/NavPanel";
 import Prime from "../Components/Prime/Prime";
 import Hearing from "../Components/Hearing/Hearing";
 import Catalog from "../Components/Catalog/Catalog";
+import Explore from "./Explore";
 function App() {
   return (
     <>
@@ -17,7 +18,11 @@ function App() {
         <Catalog />
         <Hearing />
         <NavPanel />
+      
+
       </div>
+      <Explore/>
+    
     </>
   );
 }

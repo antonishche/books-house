@@ -1,11 +1,12 @@
 import Stories from "../Stories/Stories";
 import "./HomeScreen.scss";
+import Time from "../Time/Time";
 export default function HomeScreen() {
   return (
     <div className="container">
       <div className="navigation">
         <div className="navigation__leftitem">
-          <span className="navigation-time">9 : 41</span>
+        <Time />
         </div>
         <div className="navigation__rightitem">
           <img src="../../public/Set.svg" alt="#" />

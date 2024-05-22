@@ -1,0 +1,51 @@
+[
+    {
+      "firstName": "The Wild Robot",
+      "img": "../public/1.jpg",
+      "id": 0
+    },
+    {
+        "firstName": "Funny Story",
+        "img": "../public/2.jpg",
+      "id": 1
+      
+    },
+    {
+        "firstName": "All Fours",
+        "img": "../public/3.jpg",
+      "id": 2
+    },
+    {
+        "firstName": " North Woods",
+        "img": "../public/4.jpg",
+      "id": 3
+    },
+    {
+      "firstName": "The Paris Novel",
+      "img": "../public/5.jpg",
+    "id": 4
+  },
+  {
+    "firstName": "Martyr!",
+    "img": "../public/6.jpg",
+  "id": 5
+},
+{
+  "firstName": "The Familiar",
+  "img": "../public/7.jpg",
+"id": 6
+},
+{
+  "firstName": "Long Island",
+  "img": "../public/8.jpg",
+"id": 7
+},
+ {
+  "firstName": "Meditations",
+  "img": "../public/9.jpg",
+"id": 8
+}
+
+
+  ]
+  

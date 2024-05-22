@@ -12,8 +12,7 @@ export default function Genres() {
       );
       setGenres(res.data.results.lists);
       console.log(res.data.results.lists);
-    };
-    fetchBooks();
+    };    fetchBooks();
   }, []);
   return (
     <div className={showAll}>
