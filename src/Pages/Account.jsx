@@ -1,8 +1,19 @@
+import NavPanel from '../Components/NavPanel/NavPanel.jsx'
 import "../Style/Account.scss";
 export default function Account() {
   return (
     <div>
       <div className="container">
+      <div className="navigation">
+        <div className="navigation__leftitem">
+          <span className="navigation-time">9 : 41</span>
+        </div>
+        <div className="navigation__rightitem">
+          <img src="../../public/Set.svg" alt="#" />
+          <img src="../../public/Wifi.svg" alt="#" />
+          <img src="../../public/Battery.svg" alt="#" />
+        </div>
+      </div>
         <h2>Account</h2>
         <div className="box">
           <div className="icon">
@@ -89,6 +100,7 @@ export default function Account() {
             <p>Feel free to ask, We are here to help</p>
           </div>
         </div>
+        <NavPanel/>
       </div>
     </div>
   )
