@@ -1,7 +1,9 @@
 import "./NavPanel.scss";
+import { useState } from "react";
+import { NavLink,BrowserRouter,Route,Routes } from "react-router-dom";
 
 export default function NavPanel() {
-  return (
+  return ( 
     <div className="footer">
       <div className="footer__item footer__item-active">
         <svg
@@ -36,8 +38,11 @@ export default function NavPanel() {
             fill="#C4CCCC"
           />
         </svg>
-
-        <span className="footer__item-title">Explore</span>
+     <footer>
+ 
+     </footer>
+      
+        <span  className="footer__item-title">Explore</span>
       </div>
       <div className="footer__item ">
         <svg

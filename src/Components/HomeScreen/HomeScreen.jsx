@@ -1,5 +1,7 @@
 import Stories from "../Stories/Stories";
 import "./HomeScreen.scss";
+import Time from "../Time/Time";
+
 import Genres from "../Genres/Genres";
 import NavPanel from "../NavPanel/NavPanel";
 import Prime from "../Prime/Prime";
@@ -9,12 +11,13 @@ import React, { useState } from "react";
 
 import Catalog from "../Catalog/Catalog";
 
+
 export default function HomeScreen() {
   return (
     <div className="container">
       <div className="navigation">
         <div className="navigation__leftitem">
-          <span className="navigation-time">9 : 41</span>
+        <Time />
         </div>
         <div className="navigation__rightitem">
           <img src="../../Set.svg" alt="#" />
@@ -35,7 +38,6 @@ export default function HomeScreen() {
       </div>
       <Genres />
       <Prime />
-      <Catalog />
       <Hearing />
       <NavPanel />
     </div>

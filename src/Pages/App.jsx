@@ -7,6 +7,9 @@ import NavPanel from "../Components/NavPanel/NavPanel";
 import Prime from "../Components/Prime/Prime";
 import Hearing from "../Components/Hearing/Hearing";
 import Catalog from "../Components/Catalog/Catalog";
+
+import Explore from "./Explore";
+
 import Profile from "../Components/Profiledetails/Profile";
 
 
@@ -20,6 +23,7 @@ import { getAuth , onAuthStateChanged } from 'firebase/auth';
 import { NavLink , BrowserRouter , Routes , Route , useNavigate } from "react-router-dom";
 
 import Payment from "../Components/Payment/Payment";
+
 
 
 function App() {
@@ -60,21 +64,9 @@ function App() {
       <Account />
       <div className="container">
         <HomeScreen />
-
-      <Account />
-
-      <Profile />
-      <div className="container">
-        <HomeScreen />
-        <Genres />
-        <Prime />
-        <Catalog />
-        <Hearing />
-        <NavPanel />
-
-      <div className="container">
-        <HomeScreen />
+        <Profile />
       </div>
+      <Explore/>
       <Payment/>
 
     </>
