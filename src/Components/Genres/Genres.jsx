@@ -34,7 +34,6 @@ export default function Genres() {
       console.log(res.data.results.lists);
     };    fetchBooks();
 
-    };
     fetchGenres();
   }, []);
 
