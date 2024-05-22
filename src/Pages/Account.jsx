@@ -15,6 +15,7 @@ export default function Account() {
         </div>
       </div>
         <h2>Account</h2>
+        <h2 className="container-title">Account</h2>
         <div className="box">
           <div className="icon">
             <img src="../../public/account-icon.png" alt="#" />
