@@ -36,6 +36,13 @@ function App() {
       <div className="container">
         <HomeScreen />
        
+
+
+      </div>
+      {/*  {showLogIn && <LogIn hideLogIn={handleHideLogIn} showSignUp={handleShowSingUp}/>}
+       {showSignUp && <SignUp hideSignUp={handleHideSingUp} showLogIn={handleShowLogIn}/>} */}
+      {/* <Payment/> */}
+
       </div>
       {/* {showLogIn && (
         <LogIn hideLogIn={handleHideLogIn} showSignUp={handleShowSingUp} />
@@ -44,6 +51,7 @@ function App() {
         <SignUp hideSignUp={handleHideSingUp} showLogIn={handleShowLogIn} />
       )} */}
       {/* // <Payment/> */}
+
     </>
   );
 }
