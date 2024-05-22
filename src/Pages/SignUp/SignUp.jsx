@@ -1,13 +1,16 @@
 import React from 'react'
 import './SignUp.scss'
 import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-export default function SignUp(props) {
+export default function SignUp() {
 
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
   const [name , setName] = useState("")
+
+  const navigate = useNavigate()
 
   useEffect(() => { 
     document.body.style.overflow = 'hidden'
@@ -19,7 +22,7 @@ export default function SignUp(props) {
     const auth = getAuth()
     createUserWithEmailAndPassword(auth, email, password).then(user => {
       console.log(user);
-      props.hideSignUp()
+      navigate("/")
     }).catch((e) => console.log(e))
   }
 
@@ -37,7 +40,7 @@ export default function SignUp(props) {
                 <h4>Terms of Service & Privacy Policy</h4>
                 <button type='submit'>Create</button>
                 <p className='center_p'>Already have an account?</p>
-                <h4 onClick={props.hideSignUp}>-Log in</h4>
+                <Link to="/login" className='to_login'>-Log in</Link>
             </form>
         </div>
     </div>

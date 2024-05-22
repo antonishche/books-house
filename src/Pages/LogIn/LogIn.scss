@@ -51,5 +51,18 @@
             color: white;
             cursor: pointer;
         }
+        .err_text{
+            color: red;
+        }
+        .to_signup{
+            text-decoration: none;
+            color: 
+            white;
+            font-size: 18px;
+            transition: 0.4s;
+            &:hover{
+                color: rgb(167, 167, 167);
+            }
+        }
     }
 }
