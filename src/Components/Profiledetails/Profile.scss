@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  .back {
+    display: flex;
+    justify-content: space-around;
+    width: 90px;
+    p {
+      padding-top: 5px;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 15.31px;
+      text-align: left;
+      color: #eaf4f4;
+    }
+  }
+  .title {
+    margin-top: 20px;
+    margin-left: 16px;
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28.8px;
+      text-align: left;
+      color: #eaf4f4;
+    }
+  }
+  .profile_icon {
+    margin-top: 10px;
+    margin-left: 36%;
+  }
+  .line {
+    width: 358px;
+    height: 0px;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #313333;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .name {
+    margin-top: 20px;
+    margin-left: 10px;
+    p {
+      font-size: 12px;
+      font-weight: 325;
+      line-height: 14.4px;
+      text-align: left;
+      color: #eaf4f4;
+    }
+  }
+  .email {
+    margin-top: 20px;
+    margin-left: 10px;
+    p {
+      font-size: 12px;
+      font-weight: 325;
+      line-height: 14.4px;
+      text-align: left;
+      color: #eaf4f4;
+    }
+  }
+  .date {
+    margin-top: 20px;
+    margin-left: 10px;
+    p {
+      font-size: 12px;
+      font-weight: 325;
+      line-height: 14.4px;
+      text-align: left;
+      color: #eaf4f4;
+    }
+  }
+}
+.form-group {
+  margin-top: 5px;
+  margin-left: 20px;
+  label {
+    font-family: Gotham;
+    font-size: 12px;
+    font-weight: 325;
+    line-height: 14.4px;
+    text-align: left;
+    color: #eaf4f4;
+  }
+  .input-icon {
+    margin-left: 5px;
+  }
+  
+}
+.form-container {
+  margin-bottom: 100px;
+}

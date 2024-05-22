@@ -1,5 +1,14 @@
 import Stories from "../Stories/Stories";
 import "./HomeScreen.scss";
+import Genres from "../Genres/Genres";
+import NavPanel from "../NavPanel/NavPanel";
+import Prime from "../Prime/Prime";
+import Hearing from "../Hearing/Hearing";
+
+import React, { useState } from "react";
+
+import Catalog from "../Catalog/Catalog";
+
 export default function HomeScreen() {
   return (
     <div className="container">
@@ -24,6 +33,11 @@ export default function HomeScreen() {
       <div className="stories">
         <Stories />
       </div>
+      <Genres />
+      <Prime />
+      <Catalog />
+      <Hearing />
+      <NavPanel />
     </div>
   );
 }
