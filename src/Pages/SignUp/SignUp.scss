@@ -51,5 +51,15 @@
             color: white;
             cursor: pointer;
         }
+        .to_login{
+            text-decoration: none;
+            color: 
+            white;
+            font-size: 18px;
+            transition: 0.4s;
+            &:hover{
+                color: rgb(167, 167, 167);
+            }
+        }
     }
 }

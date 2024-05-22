@@ -1,19 +1,17 @@
 import React from 'react'
 import "./LogIn.scss"
 import { useState, useEffect } from 'react';
+import { Link , useNavigate } from 'react-router-dom';
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-export default function LogIn(props) {
+export default function LogIn() {
 
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
-  const {hideLogIn} = props.hideLogIn
-  // console.log(props.hideLogIn);
-  // console.log(hideLogIn);
-  const {showSignUp} = props.showSignUp
-
   const [error , setError] = useState(false)
+
+  const navigate = useNavigate()
 
   useEffect(() => { 
     document.body.style.overflow = 'hidden'
@@ -27,7 +25,7 @@ export default function LogIn(props) {
     signInWithEmailAndPassword(auth, email, password)
     .then(user => {
       console.log(user);
-      props.hideLogIn()
+      navigate("/")
     }).catch((e) => {
       setError(true)
       console.log(e);
@@ -40,11 +38,12 @@ export default function LogIn(props) {
         <div className="login_box">
             <h2>Log in</h2>
             <form action="" onSubmit={getLoginData}>
+              {error && <p className='err_text'>Incorrect password or email</p>}
                 <input type="email" placeholder='email' onChange={(e)=>setEmail(e.target.value)} required/>
                 <input type="password" placeholder='password' onChange={(e)=>setPassword(e.target.value)} required/>
                 <button type='submit'>Continue</button>
                 <p className='center_p'>Don't have an account?</p>
-                <h4 onClick={props.showSignUp}>-Sign up</h4>
+                <Link to="/signup" className='to_signup'>-Sign up</Link>
             </form>
         </div>
     </div>

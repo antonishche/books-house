@@ -12,35 +12,57 @@ import LogIn from "./LogIn/LogIn";
 import SignUp from "./SignUp/SignUp";
 
 import { useState, useCallback, useEffect } from 'react';
-import { getAuth } from 'firebase/auth';
+import { getAuth , onAuthStateChanged } from 'firebase/auth';
+import { NavLink , BrowserRouter , Routes , Route , useNavigate } from "react-router-dom";
 
 
 import Payment from "../Components/Payment/Payment";
 
 function App() {
 
-  const [showLogIn , setShowLogIn] = useState(true)
-  const [showSignUp , setShowSignUp] = useState(false)
+  const navigate = useNavigate()
+  const auth = getAuth()
 
-  const handleHideLogIn = useCallback(() => setShowLogIn(false), []);
-  const handleHideSingUp = useCallback(() => setShowSignUp(false), []);
-  const handleShowLogIn = useCallback(() => setShowLogIn(true), []);
-  const handleShowSingUp = useCallback(() => setShowSignUp(true), []);
-
+  const [user , setUser] = useState(false)
+  
   // useEffect(() => {
   //   const unscribe = getAuth().onAuthStateChanged(async ()=>{
   //     unscribe
   //     const {currentUser} = getAuth()
   //     if (!currentUser) {
-        
   //     }
   //   } )
   // })
 
+  useEffect(() => {
+    onAuthStateChanged(auth , (currentUser)=>{
+      if (!currentUser) {
+        navigate("/login")
+        setUser({
+          displayName: null,
+          email: null
+        })
+        return
+      }
+      setUser({
+        displayName: currentUser.displayName,
+          email: currentUser.email
+      })
+    })
+  }, [])
+
+  if (!user) {
+    return <h1>Loading...</h1>
+  }
+
   return (
     <>
-      {/* <Account /> */}
-      {/* <div className="container">
+    <Routes>
+      <Route path="/login" element={<LogIn/>} />
+      <Route path="/signup" element={<SignUp/>} />
+    </Routes>
+      <Account />
+      <div className="container">
         <HomeScreen />
         <Genres />
         <Prime />
@@ -49,10 +71,6 @@ function App() {
         <NavPanel />
 
       </div>
-      {showLogIn && <LogIn hideLogIn={handleHideLogIn} showSignUp={handleShowSingUp}/>}
-      {showSignUp && <SignUp hideSignUp={handleHideSingUp} showLogIn={handleShowLogIn}/>}
-
-      </div> */}
       <Payment/>
 
     </>
