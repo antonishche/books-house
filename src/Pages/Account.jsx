@@ -9,7 +9,7 @@ import { Routes , Route , useNavigate } from "react-router-dom";
 export default function Account() {
 
   const navigate = useNavigate();
-   
+
   return (
     <div>
       <div className="container">
@@ -50,7 +50,7 @@ export default function Account() {
             <p>Profile details</p>
           </div>
           <div className="profile-details-a">
-            <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
+            <img src="../../public/Arrow.png" alt="#" />
           </div>
         </div>
         <div className="payment" onClick={()=>navigate("/payment")}>
@@ -61,7 +61,7 @@ export default function Account() {
             <p>Payment</p>
           </div>
           <div className="payment-a">
-            <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
+            <img src="../../public/Arrow.png" alt="#" />
           </div>
         </div>
         <div className="subscription">
@@ -72,7 +72,7 @@ export default function Account() {
             <p>Subscription</p>
           </div>
           <div className="subscription-a">
-            <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
+            <img src="../../public/Arrow.png" alt="#" />
           </div>
         </div>
         <div className="line">
@@ -86,7 +86,7 @@ export default function Account() {
             <p>FAQs</p>
           </div>
           <div className="faqs-a">
-            <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
+            <img src="../../public/Arrow.png" alt="#" />
           </div>
         </div>
         <div className="logout" onClick={()=>navigate("/exit")}>
@@ -97,7 +97,7 @@ export default function Account() {
             <p>Logout</p>
           </div>
           <div className="logout-a">
-            <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
+            <img src="../../public/Arrow.png" alt="#" />
           </div>
         </div>
         <div className="help">
