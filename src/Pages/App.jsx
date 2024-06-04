@@ -16,6 +16,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { getAuth , onAuthStateChanged } from 'firebase/auth';
 import { Routes , Route , useNavigate } from "react-router-dom";
 
+
 function App() {
   
   const navigate = useNavigate()

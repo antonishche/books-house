@@ -50,9 +50,8 @@ export default function NavPanel() {
      <footer>
  
      </footer>
-      
-        <span 
-         className="footer__item-title">Explore</span>
+    
+        <span className="footer__item-title">Explore</span>
       </div>
       <div className="footer__item ">
         <svg
