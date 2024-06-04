@@ -1,6 +1,8 @@
 import "./Payment.scss";
 import NavPanel from "../NavPanel/NavPanel";
+import Time from "../Time/Time";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Card({ name, cardNumber, cvv, MMYY }) {
   return (
@@ -17,6 +19,8 @@ export default function Payment() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cards, setCards] = useState([]);
 
+  const navigate = useNavigate()
+
   const handleAddCard = (card) => {
     setCards([...cards, card]);
     setIsModalOpen(false);
@@ -27,7 +31,7 @@ export default function Payment() {
       <div className="subitem">
         <div className="navigation">
           <div className="navigation__leftitem">
-            <span className="navigation-time">9 : 41</span>
+            <Time/>
           </div>
           <div className="navigation__rightitem">
             <img src="../../public/Set.svg" alt="#" />
@@ -35,7 +39,7 @@ export default function Payment() {
             <img src="../../public/Battery.svg" alt="#" />
           </div>
         </div>
-        <div className="payment-account">
+        <div onClick={()=>navigate(-1)} className="payment-account">
           <img src="../../../public/arrow-left.svg" alt="#" />
           <h2 className="payment-account-title">Account</h2>
         </div>
@@ -102,7 +106,7 @@ function Modal({ onClose, onAddCard }) {
     <div className="modal-active-item">
       <div className="navigation">
         <div className="navigation__leftitem">
-          <span className="navigation-time">9 : 41</span>
+          <Time/>
         </div>
         <div className="navigation__rightitem">
           <img src="../../public/Set.svg" alt="#" />

@@ -1,12 +1,21 @@
 import NavPanel from '../Components/NavPanel/NavPanel.jsx'
 import "../Style/Account.scss";
+import Time from "../Components/Time/Time";
+import Payment from '../Components/Payment/Payment.jsx';
+import Profile from '../Components/Profiledetails/Profile';
+
+import { Routes , Route , useNavigate } from "react-router-dom";
+
 export default function Account() {
+
+  const navigate = useNavigate();
+   
   return (
     <div>
       <div className="container">
       <div className="navigation">
         <div className="navigation__leftitem">
-          <span className="navigation-time">9 : 41</span>
+          <Time/>
         </div>
         <div className="navigation__rightitem">
           <img src="../../public/Set.svg" alt="#" />
@@ -14,8 +23,6 @@ export default function Account() {
           <img src="../../public/Battery.svg" alt="#" />
         </div>
       </div>
-        <h2>Account</h2>
-        <h2 className="container-title">Account</h2>
         <div className="box">
           <div className="icon">
             <img src="../../public/account-icon.png" alt="#" />
@@ -35,7 +42,7 @@ export default function Account() {
         <div className="line">
           <p></p>
         </div>
-        <div className="profile-details">
+        <div className="profile-details" onClick={()=>navigate("/profile")}>
           <div className="profile-details-icon">
             <img src="../../public/icon.png" alt="#" />
           </div>
@@ -46,7 +53,7 @@ export default function Account() {
             <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
           </div>
         </div>
-        <div className="payment">
+        <div className="payment" onClick={()=>navigate("/payment")}>
           <div className="payment-icon">
             <img src="../../public/card.png" alt="#" />
           </div>
@@ -82,7 +89,7 @@ export default function Account() {
             <a href="#"><img src="../../public/Arrow.png" alt="#" /></a>
           </div>
         </div>
-        <div className="logout">
+        <div className="logout" onClick={()=>navigate("/exit")}>
           <div className="logout-icon">
             <img src="../../public/uil_signout.png" alt="#" />
           </div>

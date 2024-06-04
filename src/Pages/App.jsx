@@ -1,18 +1,12 @@
 import "../Style/App.scss";
+
 import Account from "./Account";
-import HomeScreen from "../Components/HomeScreen/HomeScreen";
-
-import Genres from "../Components/Genres/Genres";
-import NavPanel from "../Components/NavPanel/NavPanel";
-import Prime from "../Components/Prime/Prime";
-import Hearing from "../Components/Hearing/Hearing";
-import Catalog from "../Components/Catalog/Catalog";
-
 import Explore from "./Explore";
 
-import Profile from "../Components/Profiledetails/Profile";
-
-
+import HomeScreen from "../Components/HomeScreen/HomeScreen";
+import Payment from '../Components/Payment/Payment.jsx';
+import Profile from '../Components/Profiledetails/Profile';
+import SignOut from "../Components/SignOut/SignOut";
 
 import LogIn from "./LogIn/LogIn";
 import SignUp from "./SignUp/SignUp";
@@ -20,10 +14,7 @@ import SignUp from "./SignUp/SignUp";
 
 import { useState, useCallback, useEffect } from 'react';
 import { getAuth , onAuthStateChanged } from 'firebase/auth';
-import { NavLink , BrowserRouter , Routes , Route , useNavigate } from "react-router-dom";
-
-import Payment from "../Components/Payment/Payment";
-
+import { Routes , Route , useNavigate } from "react-router-dom";
 
 
 function App() {
@@ -56,19 +47,16 @@ function App() {
 
   return (
     <>
-
     <Routes>
       <Route path="/login" element={<LogIn/>} />
       <Route path="/signup" element={<SignUp/>} />
+      <Route path="/account/*" element={<Account />} />
+      <Route path="/explore" element={<Explore/>} />
+      <Route path="/" element={<HomeScreen/>} />
+      <Route path="/payment" element={<Payment/>} />
+      <Route path="/profile" element={<Profile/>} />
+      <Route path="/exit" element={<SignOut/>} />
     </Routes>
-      <Account />
-      <div className="container">
-        <HomeScreen />
-        <Profile />
-      </div>
-      <Explore/>
-      <Payment/>
-
     </>
   );
 }

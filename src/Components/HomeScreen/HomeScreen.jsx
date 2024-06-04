@@ -8,11 +8,19 @@ import Prime from "../Prime/Prime";
 import Hearing from "../Hearing/Hearing";
 
 import React, { useState } from "react";
+import { NavLink , BrowserRouter , Routes , Route , useNavigate } from "react-router-dom";
 
+import Explore from "../../Pages/Explore";
 import Catalog from "../Catalog/Catalog";
+import Account from "../../Pages/Account";
+import App from "../../Pages/App";
+
 
 
 export default function HomeScreen() {
+
+  const navigate = useNavigate()
+
   return (
     <div className="container">
       <div className="navigation">
@@ -25,7 +33,7 @@ export default function HomeScreen() {
           <img src="../../Battery.svg" alt="#" />
         </div>
       </div>
-      <div className="header">
+      <div className="header"  onClick={()=>navigate("/account")}>
         <div className="header__leftitem">
           <img src="../../good afternoon.svg" alt="#" />
         </div>
@@ -37,6 +45,7 @@ export default function HomeScreen() {
         <Stories />
       </div>
       <Genres />
+      {/* <Catalog/> */}
       <Prime />
       <Hearing />
       <NavPanel />
