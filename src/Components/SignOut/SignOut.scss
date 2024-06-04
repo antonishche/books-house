@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    .back {
+      display: flex;
+      justify-content: space-around;
+      width: 90px;
+      p {
+        padding-top: 5px;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 15.31px;
+        text-align: left;
+        color: #eaf4f4;
+      }
+    }
+    .title {
+      margin-top: 20px;
+      margin-left: 16px;
+      display: flex;
+      justify-content: center;
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.8px;
+        text-align: left;
+        color: #eaf4f4;
+      }
+    }
+    .future_way-btn{
+        margin: 20px 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+        .cancel{
+            color: white;
+            background-color: rgb(151, 6, 6);
+            &:hover{
+                background-color: rgb(188, 35, 35);
+            }
+        }
+        .log_out{
+            color: rgb(255, 255, 255);
+            background-color: #c0c0c090;
+            &:hover{
+                background-color: rgb(141, 141, 141);
+            }
+        }
+        .btn{
+            transition: 0.4s;
+            font-size: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+  }

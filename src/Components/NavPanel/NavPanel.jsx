@@ -1,9 +1,19 @@
 import "./NavPanel.scss";
+import { useState } from "react";
+import { NavLink,BrowserRouter,Route,Routes,useNavigate } from "react-router-dom";
+
+import Explore from "../../Pages/Explore";
+import HomeScreen from "../HomeScreen/HomeScreen";
 
 export default function NavPanel() {
-  return (
+
+  const navigate = useNavigate()
+
+  return ( 
     <div className="footer">
-      <div className="footer__item footer__item-active">
+      
+      
+      <div className="footer__item footer__item-active" onClick={()=>navigate("/")}>
         <svg
           width="24"
           height="24"
@@ -18,10 +28,11 @@ export default function NavPanel() {
             fill="#C4CCCC"
           />
         </svg>
-
         <span className="footer__item-title">Home</span>
       </div>
-      <div className="footer__item">
+
+
+      <div className="footer__item" onClick={()=>navigate('/explore')}>
         <svg
           width="24"
           height="24"
@@ -36,8 +47,12 @@ export default function NavPanel() {
             fill="#C4CCCC"
           />
         </svg>
-
-        <span className="footer__item-title">Explore</span>
+     <footer>
+ 
+     </footer>
+      
+        <span 
+         className="footer__item-title">Explore</span>
       </div>
       <div className="footer__item ">
         <svg

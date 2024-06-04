@@ -1,11 +1,15 @@
 import NavPanel from "../../Components/NavPanel/NavPanel.jsx";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import Time from "../Time/Time";
 import "./Profile.scss";
 
-function Genres() {
+function Profile() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const savedName = localStorage.getItem("savedName");
@@ -40,7 +44,7 @@ function Genres() {
     <div className="container">
       <div className="navigation">
         <div className="navigation__leftitem">
-          <span className="navigation-time">9 : 41</span>
+          <Time/>
         </div>
         <div className="navigation__rightitem">
           <img src="../../public/Set.svg" alt="#" />
@@ -48,7 +52,7 @@ function Genres() {
           <img src="../../public/Battery.svg" alt="#" />
         </div>
       </div>
-      <div className="back">
+      <div onClick={()=>navigate(-1)} className="back">
         <a href="#">
           <img src="../../../public/arrow-left.png" alt="#" />
         </a>
@@ -125,4 +129,4 @@ function Genres() {
   );
 }
 
-export default Genres;
+export default Profile;
